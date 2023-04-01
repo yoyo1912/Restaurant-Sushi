@@ -1,15 +1,15 @@
-p.info {
-    color: orange;
+/* Etapa 2.1 */
+:root {
+    --baby-blue: #B7E9ED;
+    --dark-blue: #4F9BA1;
+    --pink: #EC8C8D;
+    --baby-green: #CFED98;
+    --dark-green: #8FA16A;
 }
 
-p {
-    color: red;
-}
-
-p {
-    color: green;
-}
-
-#acasa {
-    border: 3px;
+body {
+    background-color: #4F9BA1;
+    color: #CFED98;
+    border-color: #EC8C8D;
+    scrollbar-highlight-color: #B7E9ED;
 }
