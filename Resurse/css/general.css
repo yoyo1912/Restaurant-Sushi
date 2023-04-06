@@ -13,3 +13,54 @@ body {
     border-color: #EC8C8D;
     scrollbar-highlight-color: #B7E9ED;
 }
+
+/* Etapa 2.2 */
+.grid {
+    display: grid;
+    padding-top: 10px;
+    grid-template-columns: "1fr, 1fr, 1fr, 1fr";
+    gap: 10px;
+    grid-template-areas:
+        "z-prezentare z-prezentare z-prezentare z-prezentare"
+        "z-prezentare z-prezentare z-prezentare z-prezentare"
+        "z-other z-other z-other z-other"
+        "z-other z-other z-other z-other"
+        "z-calendar z-tabel z-tabel z-anunturi"
+        "z-users-online z-user-details z-site-details z-site-details";
+}
+
+.grid>* {
+    border: 1px solid black;
+}
+
+#prezentare {
+    grid-area: z-prezentare;
+}
+
+#tabel {
+    grid-area: z-tabel;
+}
+
+#calendar {
+    grid-area: z-calendar;
+}
+
+#anunturi {
+    grid-area: z-anunturi;
+}
+
+#users-online {
+    grid-area: z-users-online;
+}
+
+#user-details {
+    grid-area: z-user-details;
+}
+
+#site-details {
+    grid-area: z-site-details;
+}
+
+#other {
+    grid-area: z-other;
+}
