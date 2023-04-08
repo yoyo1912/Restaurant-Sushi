@@ -64,3 +64,30 @@ body {
 #other {
     grid-area: z-other;
 }
+
+@media screen and (max-width: 1000px) {
+    .grid {
+        display: grid;
+        padding-top: 0.75em;
+        grid-template-columns: "1fr, 1fr, 1fr, 1fr";
+        gap: 0.3em;
+        grid-template-areas:
+            "z-prezentare z-prezentare z-prezentare z-prezentare"
+            "z-prezentare z-prezentare z-prezentare z-prezentare"
+            "z-other z-other z-other z-other"
+            "z-other z-other z-other z-other"
+            "z-calendar z-tabel z-tabel z-anunturi"
+            "z-users-online z-user-details z-site-details z-site-details";
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .grid {
+        display: block;
+        gap: 0.1em;
+    }
+
+    .animation {
+        animation: none;
+    }
+}
