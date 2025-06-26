@@ -1,17 +1,18 @@
-<!-- Etapa1.1 -->
 <!DOCTYPE html>
 <html lang="ro">
-<!-- end Etapa1.1 -->
 
 <head>
     <link rel="stylesheet" href="Resurse/css/general.css" type="text/css">
-    <!-- Etapa1.2 -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
+        integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <meta charset="UTF-8">
     <meta name="author" content="Ioana Cristina Ursoiu">
     <meta name="keywords" content="Sushi, SushiInn, restaurant, restaurant sushi, acasa, Japonia, Asia, Oferte">
     <meta name="description"
         content="Restaurant de Sushi, SushiInn, aceasi atmosfera ca intr-un han Japonez si acelasi gust autentic, direct din Asia.">
-    <!-- Etapa 1.3 -->
     <link rel="apple-touch-icon" sizes="180x180" href="/Resurse/ico/apple-touch-icon.png">
     <link rel="icon" type="image/png" sizes="32x32" href="/Resurse/ico/favicon-32x32.png">
     <link rel="icon" type="image/png" sizes="16x16" href="/Resurse/ico/favicon-16x16.png">
@@ -21,19 +22,15 @@
     <meta name="msapplication-TileColor" content="#da532c">
     <meta name="msapplication-config" content="/Resurse/ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
-    <!-- end Etapa 1.3 -->
     <title>SushiInn</title>
-    <!--end Etapa1.2 -->
 </head>
-<!-- Etapa1.4 -->
 
 <body>
     <header>
         <h1 id="Titlu">SushiInn</h1>
-        <!-- Etapa1.5 -->
         <nav id="acasa">
             <ul>
-                <li><a href="#acasa">Acasa</a>
+                <li><a href="#acasa"><i class="fa-solid fa-house"></i>Acasa</a>
                     <ul>
                         <li><a href="#meniu">Meniu</a></li>
                         <li><a href="#despre-noi">Despre noi</a></li>
@@ -84,15 +81,12 @@
                 <li>Politica de Confidentialitate</li>
             </ul>
         </nav>
-        <!--end Etapa1.5 -->
     </header>
     <main class="grid">
-        <!-- Etapa1.6 -->
         <section id="prezentare">
             <h2>Acasa</h2>
             <section>
                 <h3 id="meniu">Meniu</h3>
-                <!-- Etapa1.7 -->
                 <ul>
                     <li>Oferte</li>
                     <li>Sushi</li>
@@ -106,18 +100,14 @@
                     <li>Desert</li>
                     <li>Bauturi</li>
                 </ul>
-                <!-- end Etapa1.7 -->
             </section>
             <section>
                 <h3 id="despre-noi">Despre noi</h3>
-                <!-- Etapa1.8 -->
                 <figure>
                     <img src="Resurse/sushi1.jpg"
                         srcset="Resurse/sushi3.jpg 2x, Resurse/sushi2.jpg 1x, Resurse/sushi1.jpg 0.5x" alt="Sushi">
                     <figcaption>Sushi rolls</figcaption>
                 </figure>
-                <!--end Etapa1.8 -->
-                <!-- Etapa1.7, 1.9, 1.10-->
                 <p><q>Restaurant de <b>Sushi</b>, <b>SushiInn</b>, aceasi atmosfera ca intr-un han Japonez si
                         acelasi gust
                         autentic, direct din <b>Asia</b>.</q></p>
@@ -147,40 +137,39 @@
                 </p>
                 <p><strong>Va rog sa va uitati cu atentie la ingredientele preparatelor in caz de
                         alergii!</strong></p>
-                <!--end Etapa1.7, 1.9, 1.10-->
-                <!--Etapa1.11 -->
                 <section>
                     <h4><a href="https://slabire.koshachek.com/articles/calorii-sushi-valoarea-calorica-a-sushiului.html"
                             target="_blank">Calorii Sushi</a></h4>
                 </section>
 
                 <section>
-                    <h4><a href="https://www.youtube.com/embed/H9EN4RcTqAE" target="SushiFacts">Imnul sushi</a></h4>
                     <!-- <iframe name="SushiImn" title="YouTube video player"
                         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                         allowfullscreen></iframe> -->
-                    <h4><a href="https://www.youtube.com/embed/KfiuWZjyCZQ" target="SushiFacts">Ce este sushi?</a>
-                    </h4>
+                    <div class="container-iframe">
+                        <iframe name="SushiFacts" width="560" height="315" src="https://www.youtube.com/embed/H9EN4RcTqAE" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
+                        <nav class="taburi-iframe">
+                            <a href="https://www.youtube.com/embed/H9EN4RcTqAE" target="SushiFacts">Imnul sushi</a>
+                            <a href="https://www.youtube.com/embed/KfiuWZjyCZQ" target="SushiFacts">Ce este sushi?</a>
+                        </nav>                    
+                    </div>
                 </section>
-                <iframe name="SushiFacts" title="YouTube video player"
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-                    allowfullscreen></iframe>
                 <section>
                     <h4>SushiInn</h4>
                     <a href="Resurse/Icon.png" download>
                         <img src="Resurse/Icon.png" alt="Icon SushiInn">
+                        <i class="fa-solid fa-download"></i>
                         Downloadeaza sigla noastra
                     </a>
                 </section>
-                <!--end Etapa1.11 -->
             </section>
-            <!-- Etapa1.12 -->
-            <!--end Etapa1.12 -->
 
         </section>
         <section id="other">
-            <h3>Q&A</h3>
+            <h3><i class="fa-solid fa-circle-question"></i> Q&A</h3>
             <details>
                 <summary>Intrebari frecvente!</summary>
                 <p>1. Este nevoie de rezervare?</p>
@@ -196,49 +185,113 @@
                 <p>Pentru comenzi peste 100 de lei, transportul este gratuit. Pentru comenzi mai mici se va percepe
                     o taxa de transport de 15 lei.</p>
             </details>
-            <!-- Mutat in etapa 2 -->
             <section>
                 <h3 id="locatie">Locatia Restaurantului</h3>
             </section>
         </section>
         <section id="calendar">
-            <h3>Calendar</h3>
+            <h3><i class="fa-solid fa-calendar-days"></i> Calendar</h3>
             Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel nihil molestiae adipisci voluptatem provident
             laudantium, aliquid vero tempora repellat exercitationem quos dolore beatae quasi, perferendis, explicabo
             reprehenderit itaque modi cumque.
         </section>
-        <section id="tabel">
-            <h3>Tabel</h3>
+        <section id="orar">
+            <h2><i class="fa-solid fa-clock"></i> Orarul Restaurantului</h2>
+    
+            <div class="tabel-container">
+                <table id="tab-orar">
+                    <caption>Program de funcționare SushiInn</caption>
+                    
+                    <thead>
+                        <tr>
+                            <th>Perioadă</th>
+                            <th>Zi</th>
+                            <th>Program Dimineață</th>
+                            <th>Pauză de Masă</th>
+                            <th>Program Seară</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+                            <td>Luni</td>
+                            <td>10:00 - 12:00</td>
+                            <td>12:00 - 14:00</td>
+                            <td>14:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Marți</td>
+                            <td>09:00 - 12:00</td>
+                            <td>12:00 - 14:00</td>
+                            <td>14:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>09:00 - 11:00</td>
+                            <td>11:00 - 13:00</td>
+                            <td>13:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>09:00 - 11:00</td>
+                            <td>11:00 - 13:00</td>
+                            <td>13:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Vineri</td>
+                            <td>09:00 - 12:00</td>
+                            <td>12:00 - 14:00</td>
+                            <td>14:00 - 22:00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Weekend</td>
+                            <td>Sâmbătă</td>
+                            <td colspan="3">Deschis între 10:00 - 23:00</td>
+                        </tr>
+                        <tr>
+                            <td>Duminică</td>
+                            <td colspan="3">Închis pentru evenimente private</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Programul poate suferi modificări în zilele de sărbătoare legală.</td>
+                        </tr>
+                    </tfoot>
+                </table> 
+            </div>
         </section>
         <section id="anunturi">
-            <h3>Anunturi</h3>
+            <h3><i class="fa-solid fa-bell fa-shake"></i> Anunturi</h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo animi libero molestiae repellendus
             officia rem laudantium. Quibusdam minima quas accusamus totam. Asperiores, maxime? Illo nisi numquam
             expedita nemo magni!
         </section>
         <section id="users-online">
-            <h3>Utilizatori online</h3>
+            <h3><i class="fa-solid fa-users"></i> Utilizatori online</h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusamus consectetur ipsam tempore fugit
             quasi non hic tenetur consequuntur, eum fuga a aperiam mollitia qui aspernatur commodi ab rem ea.
         </section>
         <section id="user-details">
-            <h3>Detalii utilizator</h3>
+            <h3><i class="fa-solid fa-user"></i> Detalii utilizator</h3>
             Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt voluptatibus perspiciatis assumenda enim
             accusantium recusandae consequatur non culpa ipsum modi iusto error, itaque deserunt maiores repudiandae,
             officia deleniti sapiente veritatis.
         </section>
         <section id="site-details">
-            <h3>Detalii site</h3>
+            <h3><i class="fa-solid fa-circle-info"></i> Detalii site</h3>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Est minima deserunt, sequi cupiditate cumque
             dignissimos eaque eum tempora ea velit dolor. Id animi non tempore adipisci pariatur odio enim dignissimos.
         </section>
-        <!--end Etapa1.6 -->
     </main>
     <footer>
-        <!--Etapa1.13 -->
         <section>
-            <p><a href="#acasa">Inceputul paginii</a></p>
-            <h2>Contact</h2>
+            <a href="#acasa" id="link-top" data-tooltip="Mergi sus">
+                <div id="triunghi"></div>
+            </a>
+            <h2><i class="fa-solid fa-address-card"></i> Contact</h2>
             <address>
                 <p>Numar de Telefon: <a href="tel:+40700100000">+40700100000</a></p>
                 <p>Adresa: <a href="https://goo.gl/maps/QVZuSiZncXBK4jh37">SushiInn</a>
@@ -247,13 +300,9 @@
                 <p>Whatsapp: <a href="https://wa.me/+40700100000%22%3EWhatsapp">SushiInn whatsapp</a></p>
             </address>
         </section>
-        <!--end Etapa1.13 -->
-        <!-- Etapa1.14 -->
         <p><time datetime="2025"><small>Copyright &copy;2025 Ioana Cristina Ursoiu</small></time></p>
-        <!--end Etapa1.14 -->
     </footer>
 
 </body>
-<!--end Etapa1.4 -->
 
 </html>
