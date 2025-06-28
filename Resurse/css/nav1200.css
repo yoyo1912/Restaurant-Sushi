@@ -1,0 +1,15 @@
+#meniu-principal ul.meniu > li > a {
+    font-size: 0.9rem;
+    padding: 1rem;
+}
+
+#meniu-principal ul.meniu > li:first-child > a div.text-icon {
+    display: none;
+}
+
+#meniu-principal ul.meniu > li:first-child > a div.imag-icon {
+    display: block;
+    font-size: 1.2rem;
+    text-align: center;
+}
+

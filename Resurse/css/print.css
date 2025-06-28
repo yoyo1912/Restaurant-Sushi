@@ -1,0 +1,111 @@
+@page {
+    size: A4;
+}
+
+@page :left {
+    margin-left: 3cm;
+    margin-right: 1cm;
+}
+
+@page :right {
+    margin-right: 3cm;
+    margin-left: 1cm;
+}
+
+@page :first {
+    margin-top: 2cm;
+    margin-bottom: 2cm;
+}
+
+@media print {
+    body::before {
+        content: "Ursoiu\aIoana-Cristina";
+        position: fixed;
+        bottom: 1cm;
+        right: 1cm;
+        width: 4cm;
+        height: 1cm;
+        border: 3px solid black;
+        border-radius: 10px;
+        opacity: 0.4;
+        font-weight: bold;
+        text-align: center;
+        white-space: pre;
+        padding-top: 0.2rem;
+        z-index: 9999;
+    }
+
+    body {
+        background-color: white !important;
+        color: black !important;
+        font-family: 'Times New Roman', serif;
+        font-size: 12pt;
+    }
+
+    img, video, iframe, figcaption, #link-top, #hamburger, #ch-menu {
+        display: none !important;
+    }
+
+    #meniu-principal ul.meniu > li ul {
+        display: none !important;
+    }
+
+    header, #meniu-principal, #meniu-principal ul.meniu {
+        all: unset;
+    }
+    
+    h1 {
+        text-align: center;
+        font-size: 24pt;
+        margin-bottom: 1cm;
+    }
+
+    #meniu-principal {
+        display: block !important;
+        page-break-after: always;
+    }
+    
+    #meniu-principal ul.meniu {
+        display: block !important;
+        list-style-type: disc !important;
+        padding-left: 40px !important;
+        text-align: left;
+    }
+
+    #meniu-principal ul.meniu > li {
+        display: list-item !important;
+        margin-bottom: 0.5cm;
+    }
+
+    a, a:visited {
+        text-decoration: none !important;
+        color: inherit !important;
+    }
+
+    .grid {
+        display: block !important;
+    }
+    .grid > * {
+        margin-bottom: 1cm;
+    }
+
+    footer {
+        page-break-before: always;
+        position: relative;
+    }
+    
+    footer > section {
+        display: none;
+    }
+
+    .banner-print {
+        position: fixed;
+        bottom: 2cm;
+        left: 15%;
+        width: 70%;
+        border: 4px inset black;
+        text-align: center;
+        padding: 0.5cm;
+        display: block !important;
+    }
+}

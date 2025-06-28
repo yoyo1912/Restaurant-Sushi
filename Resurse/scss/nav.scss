@@ -1,0 +1,116 @@
+:root {
+    --culoare-meniu-bg: #2c3e50;
+    --culoare-meniu-text: #ecf0f1;
+    --culoare-submenu-bg: #34495e;
+    --culoare-hover-wipe: var(--dark-green);
+    --culoare-hover-border: var(--baby-blue);
+    --culoare-sublinie-dubla: var(--pink);
+}
+
+$viteza-tranzitie: 0.4s;
+
+@mixin tranzitie($proprietati...) {
+    transition-property: $proprietati;
+    transition-duration: $viteza-tranzitie;
+    transition-timing-function: ease-in-out;
+}
+
+#hamburger, #ch-menu {
+    display: none;
+}
+
+#meniu-principal {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+
+    ul.meniu {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+        background-color: var(--culoare-meniu-bg);
+        display: flex;
+        justify-content: center;
+
+        > li {
+            position: relative;
+
+            > a {
+                display: block;
+                padding: 1rem 1.5rem;
+                color: var(--culoare-meniu-text);
+                text-decoration: none;
+                position: relative;
+                z-index: 2;
+                @include tranzitie(color);
+
+                .imag-icon { display: none; }
+            }
+            
+            &::after {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 100%;
+                height: 100%;
+                background-color: var(--culoare-hover-wipe);
+                border: 2px solid var(--culoare-hover-border);
+                box-shadow: inset 0 0 10px rgba(0,0,0,0.5);
+                z-index: 1;
+                transform-origin: center;
+                transform: translate(-50%, -50%) scaleY(0);
+                @include tranzitie(transform);
+            }
+
+            &:hover::after {
+                transform: translate(-50%, -50%) scaleY(1);
+            }
+
+            ul {
+                display: block;
+                position: absolute;
+                left: 0;
+                top: 100%;
+                width: 200px;
+                padding: 0;
+                list-style-type: none;
+                background-color: var(--culoare-submenu-bg);
+                opacity: 0;
+                visibility: hidden;
+                transform-origin: top left;
+                transform: scale(0.9, 0.7);
+                @include tranzitie(transform, opacity, visibility);
+
+                li a {
+                    color: var(--culoare-meniu-text);
+                    text-decoration: none;
+                    padding: 0.8rem 1rem;
+                    display: block;
+                    position: relative;
+                    
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        bottom: 5px;
+                        left: 1rem;
+                        height: 3px;
+                        width: 0;
+                        border-bottom: 3px double var(--culoare-sublinie-dubla);
+                        @include tranzitie(width);
+                    }
+
+                    &:hover::after {
+                        width: calc(100% - 2rem);
+                    }
+                }
+            }
+
+            &:hover > ul {
+                opacity: 1;
+                visibility: visible;
+                transform: scale(1, 1);
+            }
+        }
+    }
+}

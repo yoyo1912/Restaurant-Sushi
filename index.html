@@ -2,13 +2,14 @@
 <html lang="ro">
 
 <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="Resurse/css/general.css" type="text/css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=M+PLUS+Rounded+1c:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" 
         integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <meta charset="UTF-8">
     <meta name="author" content="Ioana Cristina Ursoiu">
     <meta name="keywords" content="Sushi, SushiInn, restaurant, restaurant sushi, acasa, Japonia, Asia, Oferte">
     <meta name="description"
@@ -23,62 +24,98 @@
     <meta name="msapplication-config" content="/Resurse/ico/browserconfig.xml">
     <meta name="theme-color" content="#ffffff">
     <title>SushiInn</title>
+    <link rel="stylesheet" href="Resurse/scss/nav.css" type="text/css">
+    <link
+      rel="stylesheet"
+      media="screen and (min-width: 801px) and (max-width:1200px)"
+      href="Resurse/css/nav1200.css"
+      type="text/css"
+    />
+    <link rel="stylesheet" media="screen and (max-width:800px)" href="Resurse/css/nav800.css" type="text/css" />
+    <link rel="stylesheet" media="print" href="Resurse/css/print.css" type="text/css" />
 </head>
 
 <body>
     <header>
         <h1 id="Titlu">SushiInn</h1>
-        <nav id="acasa">
-            <ul>
-                <li><a href="#acasa"><i class="fa-solid fa-house"></i>Acasa</a>
+        <input type="checkbox" id="ch-menu">
+        <label id="hamburger" for="ch-menu">
+            <img src="Resurse/imagini/Hamburger_icon_alb.png" alt="Meniu">
+        </label>
+        <nav id="meniu-principal">
+            <ul class="meniu">
+                <li>
+                    <a href="#acasa">
+                        <div class="text-icon">Acasă</div>
+                        <div class="imag-icon"><i class="fa-solid fa-house"></i></div>
+                    </a>
                     <ul>
                         <li><a href="#meniu">Meniu</a></li>
                         <li><a href="#despre-noi">Despre noi</a></li>
                         <li><a href="#locatie">Locatia Restaurantului</a></li>
                     </ul>
                 </li>
-                <li>Meniu
+                <li>
+                    <a href="meniu-produse.html">
+                        <div class="text-icon">Meniu Produse</div>
+                        <div class="imag-icon"><i class="fa-solid fa-utensils"></i></div>
+                    </a>
                     <ul>
-                        <li>Oferte</li>
-                        <li>Sushi
-                            <ul>
-                                <li>Special rolls</li>
-                                <li>Classic rolls</li>
-                                <li>Hot rolls</li>
-                                <li>Platou sushi</li>
-                            </ul>
-                        </li>
-                        <li>Nigiri</li>
-                        <li>Sashimi</li>
-                        <li>Bento</li>
-                        <li>Salate</li>
-                        <li>Supe
-                            <ul>
-                                <li>Ramen</li>
-                                <li>Tom yum</li>
-                                <li>Miso</li>
-                            </ul>
-                        </li>
-                        <li>Noodles</li>
-                        <li>Extra</li>
-                        <li>Desert</li>
-                        <li>Bauturi
-                            <ul>
-                                <li>Alcoolice</li>
-                                <li>Racoritoare</li>
-                                <li>Cafea</li>
-                                <li>Bauturi calde</li>
-                            </ul>
-                        </li>
+                        <li><a href="meniu-produse.html#oferte">Oferte</a></li>
+                        <li><a href="meniu-produse.html#sushi">Sushi</a></li>
+                        <li><a href="meniu-produse.html#nigiri">Nigiri</a></li>
+                        <li><a href="meniu-produse.html#sashimi">Sashimi</a></li>
+                        <li><a href="meniu-produse.html#bento">Bento</a></li>
+                        <li><a href="meniu-produse.html#salate">Salate</a></li>
+                        <li><a href="meniu-produse.html#supe">Supe</a></li>
+                        <li><a href="meniu-produse.html#noodles">Noodles</a></li>
+                        <li><a href="meniu-produse.html#extra">Extra</a></li>
+                        <li><a href="meniu-produse.html#desert">Desert</a></li>
+                        <li><a href="meniu-produse.html#bauturi">Băuturi</a></li>
                     </ul>
                 </li>
-                <li>Despre noi</li>
-                <li>Contact</li>
-                <li>Profil</li>
-                <li>Cos de cumparaturi</li>
-                <li>Termeni si Conditii</li>
-                <li>Politia Cookies</li>
-                <li>Politica de Confidentialitate</li>
+                <li>
+                    <a href="despre-noi.html">
+                        <div class="text-icon">Despre Noi</div>
+                        <div class="imag-icon"><i class="fa-solid fa-info-circle"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="contact.html">
+                        <div class="text-icon">Contact</div>
+                        <div class="imag-icon"><i class="fa-solid fa-address-card"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="profil.html">
+                        <div class="text-icon">Profil</div>
+                        <div class="imag-icon"><i class="fa-solid fa-user"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="cos-de-cumparaturi.html">
+                        <div class="text-icon">Cos de cumparaturi</div>
+                        <div class="imag-icon"><i class="fa-solid fa-basket-shopping"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="termeni-si-conditii.html">
+                        <div class="text-icon">Termeni si Conditii</div>
+                        <div class="imag-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="politia-cookies.html">
+                        <div class="text-icon">Politia Cookies</div>
+                        <div class="imag-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    </a>
+                </li>
+                <li>
+                    <a href="politica-de-confidentialitate.html">
+                        <div class="text-icon">Politica de Confidentialitate</div>
+                        <div class="imag-icon"><i class="fa-solid fa-circle-info"></i></div>
+                    </a>
+                </li>
             </ul>
         </nav>
     </header>
@@ -104,8 +141,8 @@
             <section>
                 <h3 id="despre-noi">Despre noi</h3>
                 <figure>
-                    <img src="Resurse/sushi1.jpg"
-                        srcset="Resurse/sushi3.jpg 2x, Resurse/sushi2.jpg 1x, Resurse/sushi1.jpg 0.5x" alt="Sushi">
+                    <img src="Resurse/imagini/sushi1.jpg"
+                        srcset="Resurse/imagini/sushi3.jpg 2x, Resurse/imagini/sushi2.jpg 1x, Resurse/imagini/sushi1.jpg 0.5x" alt="Sushi">
                     <figcaption>Sushi rolls</figcaption>
                 </figure>
                 <p><q>Restaurant de <b>Sushi</b>, <b>SushiInn</b>, aceasi atmosfera ca intr-un han Japonez si
@@ -159,8 +196,8 @@
                 </section>
                 <section>
                     <h4>SushiInn</h4>
-                    <a href="Resurse/Icon.png" download>
-                        <img src="Resurse/Icon.png" alt="Icon SushiInn">
+                    <a href="Resurse/imagini/Icon.png" download>
+                        <img src="Resurse/imagini/Icon.png" alt="Icon SushiInn">
                         <i class="fa-solid fa-download"></i>
                         Downloadeaza sigla noastra
                     </a>
@@ -300,6 +337,7 @@
                 <p>Whatsapp: <a href="https://wa.me/+40700100000%22%3EWhatsapp">SushiInn whatsapp</a></p>
             </address>
         </section>
+        <p class="banner-print">Acesta este un proiect școlar!</p> 
         <p><time datetime="2025"><small>Copyright &copy;2025 Ioana Cristina Ursoiu</small></time></p>
     </footer>
 
