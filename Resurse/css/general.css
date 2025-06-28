@@ -52,6 +52,14 @@ html {
     scroll-behavior: smooth;
 }
 
+#despre-noi-pagina{
+    background-color: var(--dark-green);
+    border: 2px solid var(--pink);
+    border-radius: var(--colt-rotunjit);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+    padding: 1rem;
+}
+
 .grid {
     display: grid;
     padding-top: 1rem;
@@ -373,4 +381,66 @@ html {
 #link-top:hover::after {
     opacity: 1;
     visibility: visible;
+}
+
+/* Etapa 4.21 */
+.container-video {
+    margin: 2rem auto;
+    padding: 1rem;
+    background-color: var(--dark-green);
+    border: 2px solid var(--pink);
+    border-radius: var(--colt-rotunjit);
+    box-shadow: 0 4px 6px rgba(0,0,0,0.15);
+}
+
+.video-responsiv {
+    width: 100%;
+    max-width: 800px;
+    min-width: 300px;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.video-responsiv::cue {
+    background-color: rgba(255, 255, 255, 0.9);
+    color: #2c3e50;
+    font-size: 1.1rem;
+}
+
+/* Etapa 4.22 */
+a:visited {
+    color: var(--dark-blue); 
+}
+
+a[href^="http"]::before {
+    content: "⮳"; 
+    margin-right: 0.3em;
+    font-size: 150%; 
+    vertical-align: sub; 
+    transition: color 0.3s ease-in-out;
+}
+
+a[href^="http"]:hover::before {
+    color: var(--baby-blue);
+}
+
+main a {
+    position: relative;
+    text-decoration: none;
+    background-image: radial-gradient(var(--pink) 0%, var(--pink) 40%, transparent 80%, transparent 100%);
+    background-position: center;
+    background-size: 0% 0%;
+    background-repeat: no-repeat;
+    transition: background-size 0.4s ease-out;
+    padding: 0.2em 0;
+}
+
+main a:hover {
+    background-size: 100% 100%;
+}
+
+a:active {
+    outline: 2px solid var(--baby-blue);
+    border-radius: 3px;
 }

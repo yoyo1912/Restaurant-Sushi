@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>SushiInn - Despre</title>
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>        
+        <%- include("../fragmente/header.ejs");  %> 
+        <main>
+            <section id="despre-noi-pagina">
+                <h1>Despre SushiInn</h1>
+                <p>Bun venit în lumea SushiInn, unde tradiția japoneză se întâlnește cu inovația culinară.</p>
+                <h2>Istoria Noastră</h2>
+                <p>
+                    Fondat în 2024, SushiInn a pornit de la o idee simplă: să aducem gustul autentic al bucătăriei japoneze în inima orașului, într-o atmosferă primitoare și modernă. Bucătarii noștri, cu ani de experiență în restaurante de top din Tokyo și Kyoto, folosesc doar cele mai proaspete ingrediente pentru a crea preparate care încântă simțurile.
+                </p>
+                <h2>Filozofia Noastră</h2>
+                <p>
+                    Credem că fiecare masă trebuie să fie o experiență memorabilă. De aceea, punem accent pe calitatea ingredientelor, pe tehnica impecabilă de preparare și pe un serviciu excepțional. De la clasicul Nigiri la rulourile noastre inovatoare, fiecare detaliu este gândit pentru a vă oferi o călătorie culinară de neuitat.
+                </p>
+                <div class="container-video">
+                <h2>O Scurtă Prezentare</h2>
+                <video id="video-vtt" class="video-responsiv" controls preload="metadata"
+                       poster="/resurse/imagini/sushi3.jpg">
+                       
+                    <source src="/resurse/video/sushi_video.mp4" type="video/mp4">
+                    <source src="/resurse/video/sushi_video.mov" type="video/mov">
+
+                    <track src="/resurse/tracks/video_sushi_sub_ro.vtt" kind="subtitles" srclang="ro" label="Română" default>
+                    <track src="/resurse/tracks/video_sushi_sub_en.vtt" kind="subtitles" srclang="en" label="English">
+
+                    Browserul tău nu suportă tag-ul video.
+                </video>
+            </div>
+            </section>
+        </main>
+        <footer>
+            <%- include("../fragmente/footer.ejs");  %> 
+        </footer>  
+    </body>
+</html>

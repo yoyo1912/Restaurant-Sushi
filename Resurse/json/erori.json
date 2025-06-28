@@ -1,0 +1,66 @@
+{
+    "cale_baza": "/resurse/imagini/erori",
+    "eroare_default":{
+        "titlu":"Eroare necunoscuta",
+        "text": "Nu stim exact ce s-a intamplat, dar ceva clar a luat-o razna. Respira adanc si incearca din nou mai tarziu. Sau acum. Sau mai bine mai tarziu.",
+        "imagine":"default.png"
+    },
+    "info_erori": [
+        {
+            "identificator":404,
+            "status":true,
+            "titlu":"404 - Ai cautat bine?",
+            "text": "N-am gasit nimic aici... Poate ai tastat gresit sau pagina a plecat in vacanta. Incearca sa te intorci acasa.",
+            "imagine":"404.png"
+        },
+
+        {
+            "identificator":403,
+            "status":true,
+            "titlu":"403 - Acces interzis, ninja!",
+            "text": "Ce faci aici? Ai incercat sa intri unde nu ai voie. Inapoi de unde ai venit!",
+            "imagine":"403.png"
+        },
+
+        {
+            "identificator": 400,
+            "status": true,
+            "titlu": "400 - Cerere Invalida",
+            "text": "Ceva este in neregula cu cererea ta. Poate ai incercat sa accesezi un fisier protejat. Te rugam sa nu mai faci asta.",
+            "imagine": "400.png"
+        },
+
+        {
+            "identificator":500,
+            "status":true,
+            "titlu":"500 - Serverul a avut o zi proasta",
+            "text": "Se pare ca ceva s-a stricat. Noi incercam sa reparam, tu poti sa iei o pauza de cafea intre timp.",
+            "imagine":"500.png"
+        },
+
+        {
+            "identificator":1,
+            "status":false,
+            "titlu":"Site în lucru",
+            "text": "Muncim, muncim!",
+            "imagine":"default.png"
+        },
+        
+        {
+            "identificator":2,
+            "status":false,
+            "titlu":"Eroare baza date",
+            "text": "Reveniti mai tarziu!",
+            "imagine":"default.png"
+        },
+        
+        {
+            "identificator":3,
+            "status":false,
+            "titlu":"Date gresit",
+            "text": "Verificati datele",
+            "imagine":"default.png"
+        }
+    ]
+}
+  

@@ -1,0 +1,35 @@
+{
+  "name": "sushiinn",
+  "version": "1.0.0",
+  "description": "Restaurant de Sushi, SushiInn, aceasi atmosfera ca intr-un han Japonez si acelasi gust autentic, direct din Asia.",
+  "keywords": [
+    "Sushi",
+    "SushiInn",
+    "restaurant",
+    "restaurant",
+    "sushi",
+    "acasa",
+    "Japonia",
+    "Asia",
+    "Oferte"
+  ],
+  "homepage": "https://github.com/yoyo1912/Restaurant-Sushi#readme",
+  "bugs": {
+    "url": "https://github.com/yoyo1912/Restaurant-Sushi/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoyo1912/Restaurant-Sushi.git"
+  },
+  "license": "ISC",
+  "author": "Ioana-Cristina Ursoiu",
+  "type": "commonjs",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "ejs": "^3.1.10",
+    "express": "^5.1.0"
+  }
+}

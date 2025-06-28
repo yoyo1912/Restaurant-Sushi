@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="ro">
+
+<head>
+    <%- include('../fragmente/head.ejs') %>
+    <title>SushiInn</title>
+    <link rel="stylesheet" media="print" href="/resurse/css/print.css" type="text/css" />
+</head>
+
+<body>
+    <%- include('../fragmente/header.ejs') %>
+    <main class="grid">
+        <section id="prezentare">
+            <h2>Acasa</h2>
+            <section>
+                <h3 id="meniu">Meniu</h3>
+                <ul>
+                    <li>Oferte</li>
+                    <li>Sushi</li>
+                    <li>Nigiri</li>
+                    <li>Sashimi</li>
+                    <li>Bento</li>
+                    <li>Salate</li>
+                    <li>Supe</li>
+                    <li>Noodles</li>
+                    <li>Extra</li>
+                    <li>Desert</li>
+                    <li>Bauturi</li>
+                </ul>
+            </section>
+            <section>
+                <h3 id="despre-noi">Despre noi</h3>
+                <figure>
+                    <img src="/resurse/imagini/sushi1.jpg"
+                        srcset="/resurse/imagini/sushi3.jpg 2x, /resurse/imagini/sushi2.jpg 1x, /resurse/imagini/sushi1.jpg 0.5x" alt="Sushi">
+                    <figcaption>Sushi rolls</figcaption>
+                </figure>
+                <p><q>Restaurant de <b>Sushi</b>, <b>SushiInn</b>, aceasi atmosfera ca intr-un han Japonez si
+                        acelasi gust
+                        autentic, direct din <b>Asia</b>.</q></p>
+                <p>Bine ati venit la <b>SushiInn</b>, destinatia dumneavoastra pentru <b>sushi</b> japonez
+                    autentic.
+                    Restaurantul
+                    nostru ofera o selectie delicioasa de mancaruri traditionale si o combinatie de <b>sushi</b>
+                    preparat cu
+                    cele
+                    mai proaspete ingrediente. Veniti sa experimentati gustul Japoniei si al Asiei la <b>SushiInn</b>.
+                </p>
+                <p>La <b>SushiInn</b>, suntem pasionați să aducem gustul Japoniei la masa dumneavoastră.
+                    Restaurantul
+                    nostru
+                    este dedicat preparării celui mai bun <b>sushi</b> folosind doar cele mai proaspete ingrediente, iar
+                    echipa
+                    noastră de bucătari de <b>sushi</b> calificați se asigură că fiecare fel de mâncare este pregătit cu
+                    grijă
+                    și atenție la detalii.<br>
+                    În calitate de <b>restaurant de sushi</b>, ne străduim să le oferim oaspeților noștri o călătorie
+                    culinară
+                    captivantă prin <b>Japonia și Asia</b>. De la rulourile tradiționale de <b>sushi</b> la mâncăruri
+                    inovatoare de
+                    fuziune, meniul nostru este conceput pentru a vă încânta papilele gustative și a vă lăsa cu
+                    poftă de
+                    mai mult.
+                </p>
+                <p><strong>Va rog sa va uitati cu atentie la ingredientele preparatelor in caz de
+                        alergii!</strong></p>
+                <section>
+                    <h4><a href="https://slabire.koshachek.com/articles/calorii-sushi-valoarea-calorica-a-sushiului.html"
+                            target="_blank">Calorii Sushi</a></h4>
+                </section>
+
+                <section>
+                    <!-- <iframe name="SushiImn" title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                        allowfullscreen></iframe> -->
+                    <div class="container-iframe">
+                        <iframe name="SushiFacts" width="560" height="315" src="https://www.youtube.com/embed/H9EN4RcTqAE" 
+                            frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                            referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+                        <nav class="taburi-iframe">
+                            <a href="https://www.youtube.com/embed/H9EN4RcTqAE" target="SushiFacts">Imnul sushi</a>
+                            <a href="https://www.youtube.com/embed/KfiuWZjyCZQ" target="SushiFacts">Ce este sushi?</a>
+                        </nav>                    
+                    </div>
+                </section>
+                <section>
+                    <h4>SushiInn</h4>
+                    <a href="/resurse/imagini/Icon.png" download>
+                        <img src="/resurse/imagini/Icon.png" alt="Icon SushiInn">
+                        <i class="fa-solid fa-download"></i>
+                        Downloadeaza sigla noastra
+                    </a>
+                </section>
+            </section>
+
+        </section>
+        <section id="other">
+            <h3><i class="fa-solid fa-circle-question"></i> Q&A</h3>
+            <details>
+                <summary>Intrebari frecvente!</summary>
+                <p>1. Este nevoie de rezervare?</p>
+                <p>Nu, nu este nevoie de rezervare. Dar fara o rezervare nu va putem garanta un loc imediat ce
+                    ajungeti. In cazul in care restarantul este plin, va trebui sa asteptati ca o masa sa se
+                    elibereze. Asa ca va recomandam sa faceti o rezervare inainte de a veni, mai ales daca sunteti
+                    un numar mare de persoane</p>
+                <p>2. Se poate face comanda?</p>
+                <p>Da! Puteti face comenzi atat in cadrul aplicatiei, cat si in cadrul altor aplicatii de
+                    <i>delivery</i>.
+                </p>
+                <p>3. Cat costa transportul?</p>
+                <p>Pentru comenzi peste 100 de lei, transportul este gratuit. Pentru comenzi mai mici se va percepe
+                    o taxa de transport de 15 lei.</p>
+            </details>
+            <section>
+                <h3 id="locatie">Locatia Restaurantului</h3>
+            </section>
+        </section>
+        <section id="calendar">
+            <h3><i class="fa-solid fa-calendar-days"></i> Calendar</h3>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vel nihil molestiae adipisci voluptatem provident
+            laudantium, aliquid vero tempora repellat exercitationem quos dolore beatae quasi, perferendis, explicabo
+            reprehenderit itaque modi cumque.
+        </section>
+        <section id="orar">
+            <h2><i class="fa-solid fa-clock"></i> Orarul Restaurantului</h2>
+    
+            <div class="tabel-container">
+                <table id="tab-orar">
+                    <caption>Program de funcționare SushiInn</caption>
+                    
+                    <thead>
+                        <tr>
+                            <th>Perioadă</th>
+                            <th>Zi</th>
+                            <th>Program Dimineață</th>
+                            <th>Pauză de Masă</th>
+                            <th>Program Seară</th>
+                        </tr>
+                    </thead>
+                    
+                    <tbody>
+                        <tr>
+                            <td rowspan="5">Zile<br/>Lucrătoare</td>
+                            <td>Luni</td>
+                            <td>10:00 - 12:00</td>
+                            <td>12:00 - 14:00</td>
+                            <td>14:00 - 20:00</td>
+                        </tr>
+                        <tr>
+                            <td>Marți</td>
+                            <td>09:00 - 12:00</td>
+                            <td>12:00 - 14:00</td>
+                            <td>14:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Miercuri</td>
+                            <td>09:00 - 11:00</td>
+                            <td>11:00 - 13:00</td>
+                            <td>13:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Joi</td>
+                            <td>09:00 - 11:00</td>
+                            <td>11:00 - 13:00</td>
+                            <td>13:00 - 21:00</td>
+                        </tr>
+                        <tr>
+                            <td>Vineri</td>
+                            <td>09:00 - 12:00</td>
+                            <td>12:00 - 14:00</td>
+                            <td>14:00 - 22:00</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="2">Weekend</td>
+                            <td>Sâmbătă</td>
+                            <td colspan="3">Deschis între 10:00 - 23:00</td>
+                        </tr>
+                        <tr>
+                            <td>Duminică</td>
+                            <td colspan="3">Închis pentru evenimente private</td>
+                        </tr>
+                    </tbody>
+
+                    <tfoot>
+                        <tr>
+                            <td colspan="5">Programul poate suferi modificări în zilele de sărbătoare legală.</td>
+                        </tr>
+                    </tfoot>
+                </table> 
+            </div>
+        </section>
+        <section id="anunturi">
+            <h3><i class="fa-solid fa-bell fa-shake"></i> Anunturi</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat nemo animi libero molestiae repellendus
+            officia rem laudantium. Quibusdam minima quas accusamus totam. Asperiores, maxime? Illo nisi numquam
+            expedita nemo magni!
+        </section>
+        <section id="users-online">
+            <h3><i class="fa-solid fa-users"></i> Utilizatori online</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Deserunt accusamus consectetur ipsam tempore fugit
+            quasi non hic tenetur consequuntur, eum fuga a aperiam mollitia qui aspernatur commodi ab rem ea.
+        </section>
+        <section id="user-details">
+            <h3><i class="fa-solid fa-user"></i> Detalii utilizator</h3>
+            <p>Adresa ta IP este: <strong><%= locals.ip %></strong></p>
+        </section>
+        <section id="site-details">
+            <h3><i class="fa-solid fa-circle-info"></i> Detalii site</h3>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Est minima deserunt, sequi cupiditate cumque
+            dignissimos eaque eum tempora ea velit dolor. Id animi non tempore adipisci pariatur odio enim dignissimos.
+        </section>
+    </main>
+    <footer>
+        <%- include('../fragmente/footer.ejs') %>
+        <p class="banner-print">Acesta este un proiect școlar!</p>        
+    </footer>
+
+</body>
+
+</html>

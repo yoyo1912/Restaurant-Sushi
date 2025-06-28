@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>SushiInn - Eroare</title>
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>        
+        <%- include("../fragmente/header.ejs");  %> 
+        <main>
+            <div style="text-align: center; padding: 40px;">
+                <h1><%= locals.titlu %></h1>
+                <img src="<%= locals.imagine %>" alt="<%= locals.titlu %>" style="max-width: 400px; width: 50%; height: auto; margin: 20px 0;">
+                <p style="font-size: 1.2rem;"><%= locals.text %></p>            
+            </div>
+        </main>
+        <footer>
+            <%- include("../fragmente/footer.ejs");  %> 
+        </footer>  
+    </body>
+</html>
