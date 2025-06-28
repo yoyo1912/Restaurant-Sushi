@@ -1,0 +1,5 @@
+# Folderul cu dependințele Node.js
+node_modules
+
+# Folderul temp
+temp
