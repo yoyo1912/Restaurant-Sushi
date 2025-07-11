@@ -1,0 +1,50 @@
+@use "sass:color";
+
+// 1. Definirea culorilor personalizate bazate pe schema
+$sushi-dark-green: #8FA16A;
+$sushi-light-green: #CFED98;
+$sushi-pink: #EC8C8D;
+$sushi-dark-blue: #4F9BA1;
+$sushi-light-blue: #B7E9ED;
+$sushi-white: #ffffff;
+$sushi-dark-text: #333;
+
+// 2. Suprascrierea variabilelor Bootstrap INAINTE de a importa fisierul principal
+
+// a. Culori de tema
+$primary: $sushi-dark-blue;
+$secondary: $sushi-dark-green;
+$light: $sushi-light-blue;
+$dark: $sushi-dark-text;
+
+// b. Culori de font
+$body-color: $sushi-light-green;
+$headings-color: $sushi-white;
+
+// c. Dimensiuni de ecran (breakpoints)
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 801px,
+  lg: 1201px,
+  xl: 1400px,
+  xxl: 1600px
+);
+
+// d. Raza pentru border
+$border-radius: 0.5rem;
+$border-radius-lg: 0.8rem;
+
+// e. Dimensiunea literelor pentru heading-uri
+$h1-font-size: 2.8rem;
+$h2-font-size: 2.2rem;
+
+// f. Familia de font implicita
+$font-family-sans-serif: 'M PLUS Rounded 1c', sans-serif;
+
+// g. Alta variabila: Culoarea link-urilor
+$link-color: $sushi-pink;
+$link-hover-color: color.adjust($sushi-pink, $lightness: 15%);
+
+// 3. Importarea fisierului principal Bootstrap
+@import "../../node_modules/bootstrap/scss/bootstrap";

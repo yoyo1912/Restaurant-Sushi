@@ -1,0 +1,27 @@
+<% if (locals.imagini && imagini.length > 0) { %>
+    <section class="galerie-container">
+        <h2>Galerie de Sezon</h2>
+        <div class="galerie-grid">
+            <% imagini.forEach(function(imagine) { %>
+                <figure title="<%= imagine.text_descriere %>">
+                    <picture>
+                        <!-- Imagine pentru ecrane mici -->
+                        <source media="(max-width: 800px)" srcset="/resurse-resizate/small/<%= imagine.cale_fisier %>">
+                        <!-- Imagine pentru ecrane medii -->
+                        <source media="(max-width: 1200px)" srcset="/resurse-resizate/medium/<%= imagine.cale_fisier %>">
+                        <!-- Imagine default (mare) -->
+                        <img src="<%= obGlobal.obGalerie.cale_galerie %>/<%= imagine.cale_fisier %>" alt="<%= imagine.titlu %>">
+                    </picture>
+                    <figcaption>
+                        <%= imagine.titlu %>
+                        <% if (imagine.autor) { %>
+                            <small class="atributie-autor">
+                                <a href="<%= imagine.licenta_url %>" target="_blank"><%= imagine.autor %> (CC BY)</a>
+                            </small>
+                        <% } %>
+                    </figcaption>
+                </figure>
+            <% }); %>
+        </div>
+    </section>
+<% } %>

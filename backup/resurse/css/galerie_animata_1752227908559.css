@@ -1,0 +1,45 @@
+.galerie-animata {
+  display: none;
+}
+
+@media screen and (min-width: 1201px) {
+  .galerie-animata {
+    display: block;
+    border: 10px solid transparent;
+    -o-border-image: url("/resurse/imagini/sushi1.jpg") 30 stretch;
+    border-image: url("/resurse/imagini/sushi1.jpg") 30 stretch;
+    margin: 2rem auto;
+    padding: 1rem;
+    width: 80%;
+    position: relative;
+  }
+}
+.galerie-animata .slider-animat {
+  position: relative;
+  overflow: hidden;
+  height: 400px;
+}
+
+.galerie-animata .slider-animat img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: auto;
+  opacity: 0;
+  transition: opacity 0.6s, -webkit-clip-path 1s ease-in-out;
+  transition: clip-path 1s ease-in-out, opacity 0.6s;
+  transition: clip-path 1s ease-in-out, opacity 0.6s, -webkit-clip-path 1s ease-in-out;
+  -webkit-clip-path: circle(0% at center);
+  clip-path: circle(0% at center);
+}
+
+.galerie-animata .slider-animat img.active {
+  opacity: 1;
+  -webkit-clip-path: circle(150% at center);
+  clip-path: circle(150% at center);
+}
+
+.galerie-animata:hover img.active {
+  animation-play-state: paused;
+} 

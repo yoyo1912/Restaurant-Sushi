@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html  lang="ro">
+    <head>
+        <title>SushiInn - Galerie</title>
+        <%- include("../fragmente/head.ejs");  %> 
+    </head>
+    <body>
+        <%- include('../fragmente/header.ejs') %>    
+        <main>
+            <h1>Galerie Completă</h1>
+            <p>Descoperiți selecția noastră de imagini pentru anotimpul curent.</p>            
+            <%- include('../fragmente/galerie.ejs', {imagini: locals.imagini}) %>
+        </main>
+        <footer>
+            <%- include("../fragmente/footer.ejs");  %> 
+        </footer> 
+    </body>
+</html>

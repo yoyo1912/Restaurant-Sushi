@@ -2,11 +2,13 @@ const express = require('express');
 const path = require('path');
 const fs = require('fs');
 const sass = require('sass');
+const sharp = require('sharp');
 
 const app = express();
 const port = 8080;
 const obGlobal = {
     obErori: null,
+    obGalerie: null,
     folderScss: path.join(__dirname, "Resurse", "scss"),
     folderCss: path.join(__dirname, "Resurse", "css")
 };
@@ -87,9 +89,15 @@ function compileazaScss(caleScss, caleCss) {
         try {
             if(!fs.existsSync(caleBackup))
                 fs.mkdirSync(caleBackup, { recursive: true });
+
             const numeFisierCss = path.basename(caleCss);
-            fs.copyFileSync(caleCss, path.join(caleBackup, numeFisierCss));
-            console.log(`Backup creat pentru ${numeFisierCss}`);
+            const extFisier = path.extname(numeFisierCss);
+            const numeFaraExt = path.basename(numeFisierCss, extFisier);
+            const timestamp = Date.now();
+            const numeBackup = `${numeFaraExt}_${timestamp}${extFisier}`;
+
+            fs.copyFileSync(caleCss, path.join(caleBackup, numeBackup));
+            console.log(`Backup creat pentru ${numeBackup}`);
         } catch (err) {
             console.error(`Eroare la crearea backup-ului pentru ${caleCss}:`, err);
         }
@@ -102,6 +110,34 @@ function compileazaScss(caleScss, caleCss) {
     } catch (err) {
         console.error(`Eroare la compilarea ${caleScss}:`, err.message);
     }
+}
+
+function initGalerie() {
+    const continut = fs.readFileSync(path.join(__dirname, "resurse/json/galerie.json")).toString("utf-8");
+    obGlobal.obGalerie = JSON.parse(continut);
+}
+
+function getAnotimp() {
+    const d = new Date();
+    // Pentru testare:
+    // const d = new Date("2025-01-15");
+    const luna = d.getMonth();
+    if (luna >= 3 && luna <= 5) return "primavara";
+    if (luna >= 6 && luna <= 8) return "vara";
+    if (luna >= 9 && luna <= 11) return "toamna";
+    return "iarna";
+}
+
+initGalerie();
+
+function getRandomPowerOfTwo(min, max) {
+    const powers = [];
+    for (let i = min; i <= max; i++) {
+        let pow = 2 ** i;
+        if (pow > 1 && pow < 17) powers.push(pow);
+    }
+    const index = Math.floor(Math.random() * powers.length);
+    return powers[index];
 }
 
 vFisiere=fs.readdirSync(obGlobal.folderScss);
@@ -137,9 +173,62 @@ app.get("/{*any}.ejs", function(req, res, next){
     afisareEroare(res,400);
 })
 
+app.get('Resurse/galerie/mediu/:dim/:imagine', (req, res) => {
+    let dim = req.params.dim;
+    let imagine = req.params.imagine;
+
+    let latime;
+    if (dim === "small") latime = 300;
+    else if (dim === "medium") latime = 500;
+    else { afisareEroare(res, 400, "Dimensiune invalida"); return; }
+    
+    let caleImagineOrig = path.join(__dirname, "Resurse/imagini/galerie", imagine);
+    let caleImagineRedim = path.join(__dirname, "Resurse/galerie/mediu", dim, imagine);
+
+    if (fs.existsSync(caleImagineRedim)) {
+        res.sendFile(caleImagineRedim);
+    } else if (fs.existsSync(caleImagineOrig)) {
+        sharp(caleImagineOrig).resize(latime).toFile(caleImagineRedim)
+            .then(() => {
+                res.sendFile(caleImagineRedim);
+            })
+            .catch(err => {
+                console.error("Eroare la redimensionare:", err);
+                afisareEroare(res, 500, "Eroare procesare imagine");
+            });
+    } else {
+        afisareEroare(res, 404, "Imaginea originala nu exista");
+    }
+});
+
 app.get(["/","/index","/home"], function(req, res){
-    res.render("pagini/index",{ip:req.ip});
+    const anotimpCurent = getAnotimp();
+    const imaginiDeAfisat = obGlobal.obGalerie.imagini
+        .filter(img => img.anotimp === anotimpCurent)
+        .slice(0, 10);
+    const nrImgAnim = getRandomPowerOfTwo(1, 4);
+    const imaginiAnim = obGlobal.obGalerie.imagini
+        .filter((img, idx) => idx % 2 === 0)
+        .slice(0, nrImgAnim);
+    res.render("pagini/index",{
+        ip:req.ip,
+        imagini: imaginiDeAfisat,
+        imaginiAnim: imaginiAnim,
+        obGlobal: obGlobal
+    });
 })
+
+app.get("/galerie", (req, res) => {
+    const anotimpCurent = getAnotimp();
+    const imaginiDeAfisat = obGlobal.obGalerie.imagini
+        .filter(img => img.anotimp === anotimpCurent)
+        .slice(0, 10);
+
+    res.render("pagini/galerie", {
+        imagini: imaginiDeAfisat,
+        obGlobal: obGlobal
+    });
+});
 
 app.get("/server", function(req, res) {
     if(true===false){

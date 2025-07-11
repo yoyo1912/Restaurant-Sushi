@@ -1,0 +1,157 @@
+{
+    "cale_galerie": "/resurse/imagini/galerie",
+    "imagini": [
+        {
+            "cale_fisier": "anim_1.jpg",
+            "titlu": "Sushi Delicios",
+            "text_descriere": "O vedere apropiată a rulourilor de sushi perfect rulate.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_2.jpg",
+            "titlu": "Sushi în Stil Fusion",
+            "text_descriere": "Rulouri decorate artistic cu ingrediente variate.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_3.jpg",
+            "titlu": "Aranjament Minimalist",
+            "text_descriere": "O prezentare grafică modernă a sushiului pe platouri albe.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_4.jpg",
+            "titlu": "Colecție de Sushi",
+            "text_descriere": "Sortiment variat de sushi aranjat pe fundal negru elegant.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_5.jpg",
+            "titlu": "Festin Japonez",
+            "text_descriere": "Sushi și sashimi într-un aranjament bogat și colorat.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_6.jpg",
+            "titlu": "Platou Asortat",
+            "text_descriere": "Selecție diversificată de sushi servită pe tavă tradițională.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_7.jpg",
+            "titlu": "Sushi Proaspăt",
+            "text_descriere": "Ingrediente premium atent selecționate.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "anim_8.jpg",
+            "titlu": "Creativitate Culinară",
+            "text_descriere": "Sushi artistic decorat, acompaniat de sosuri moderne.",
+            "anotimp": ""
+        },
+        {
+            "cale_fisier": "sushi_galerie_1.jpg",
+            "titlu": "Dragon Roll Clasic",
+            "text_descriere": "Favoritul clientilor iarna, cu anghilă și avocado proaspăt.",
+            "anotimp": "iarna"
+        },        
+        {
+            "cale_fisier": "sushi_galerie_2.jpg",
+            "titlu": "Platou Festiv",
+            "text_descriere": "O varietate de rulouri pentru a satisface toate gusturile.",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "sushi_galerie_3.jpg",
+            "titlu": "Nigiri cu Somon",
+            "text_descriere": "Simplitate și prospețime, un deliciu clasic.",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "sushi_galerie_4.jpg",
+            "titlu": "Rulou Copt",
+            "text_descriere": "O textură crocantă și o aromă intensă, servit cald.",
+            "anotimp": "toamna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_5.jpg",
+            "titlu": "Gunkan cu Tobiko",
+            "text_descriere": "Creveți crocanți în tempura, serviți cu un sos special.",
+            "anotimp": "vara"
+        },
+        {
+            "cale_fisier": "sushi_galerie_6.jpg",
+            "titlu": "Tempura de Creveți",
+            "text_descriere": "Explozia de icre de pește zburător într-o singură mușcătură.",
+            "anotimp": "primavara"
+        },
+        {
+            "cale_fisier": "sushi_galerie_7.jpg",
+            "titlu": "Sushi de Sfeclă",
+            "text_descriere": "O variantă vegetariană inovatoare, colorată și plină de gust.",
+            "anotimp": "toamna",
+            "autor": "Agtx",
+            "licenta_url": "https://creativecommons.org/licenses/by-sa/4.0/"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy.jpg",
+            "titlu": "Perfecțiune în Oglindă",
+            "text_descriere": "Același gust desăvârșit, o nouă perspectivă.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (2).jpg",
+            "titlu": "Trio Dinamic",
+            "text_descriere": "O porție generoasă pentru o poftă pe măsură.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (3).jpg",
+            "titlu": "Esență de Dragon",
+            "text_descriere": "Gustul intens al anghilei, perfect echilibrat.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (4).jpg",
+            "titlu": "Răsfăț de Iarnă",
+            "text_descriere": "Ideal pentru o seară confortabilă de iarnă.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (5).jpg",
+            "titlu": "Clasicul Reinventat",
+            "text_descriere": "O prezentare modernă a unei rețete clasice.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (6).jpg",
+            "titlu": "Gustul Autentic",
+            "text_descriere": "Ingrediente proaspete, o plăcere garantată.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (7).jpg",
+            "titlu": "Simfonie Verde",
+            "text_descriere": "Avocado cremos ce completează perfect umplutura.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (8).jpg",
+            "titlu": "Eleganță pe Ardezie",
+            "text_descriere": "O prezentare minimalistă pentru un gust complex.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (9).jpg",
+            "titlu": "Porția de Fericire",
+            "text_descriere": "Exact ce ai nevoie pentru a-ți satisface pofta de sushi.",
+            "anotimp": "iarna"
+        },
+        {
+            "cale_fisier": "sushi_galerie_1 - Copy (10).jpg",
+            "titlu": "Capodopera Dragonului",
+            "text_descriere": "Ultima piesă dintr-o serie delicioasă, la fel de bună ca prima.",
+            "anotimp": "iarna"
+        }
+    ]
+}

@@ -1,0 +1,41 @@
+<% if (imaginiAnim && imaginiAnim.length > 0) { %>
+<section class="galerie-animata">
+    <div class="slider-animat">
+        <% imaginiAnim.forEach(function(imagine, index) { %>
+            <div class="slide <% if(index === 0){ %>active<% } %>">
+                <img src="<%= obGlobal.obGalerie.cale_galerie %>/<%= imagine.cale_fisier %>" 
+                     alt="<%= imagine.titlu %>">
+                <div class="titlu-slide"><%= imagine.titlu %></div>
+            </div>
+        <% }) %>
+    </div>
+
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const slides = document.querySelectorAll(".slider-animat .slide");
+            let index = 0;
+
+            function showSlide(i) {
+                slides.forEach((slide, idx) => {
+                    slide.classList.remove("active");
+                    if (idx === i) slide.classList.add("active");
+                });
+            }
+
+            let interval = setInterval(() => {
+                index = (index + 1) % slides.length;
+                showSlide(index);
+            }, 3000);
+
+            const container = document.querySelector(".galerie-animata");
+            container.addEventListener("mouseenter", () => clearInterval(interval));
+            container.addEventListener("mouseleave", () => {
+                interval = setInterval(() => {
+                    index = (index + 1) % slides.length;
+                    showSlide(index);
+                }, 3000);
+            });
+        });
+    </script>
+</section>
+<% } %>
