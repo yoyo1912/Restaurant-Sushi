@@ -173,7 +173,7 @@ app.get("/{*any}.ejs", function(req, res, next){
     afisareEroare(res,400);
 })
 
-app.get('Resurse/galerie/mediu/:dim/:imagine', (req, res) => {
+app.get('/Resurse/imagini/galerie/mediu/:dim/:imagine', (req, res) => {
     let dim = req.params.dim;
     let imagine = req.params.imagine;
 
@@ -182,8 +182,8 @@ app.get('Resurse/galerie/mediu/:dim/:imagine', (req, res) => {
     else if (dim === "medium") latime = 500;
     else { afisareEroare(res, 400, "Dimensiune invalida"); return; }
     
-    let caleImagineOrig = path.join(__dirname, "Resurse/imagini/galerie", imagine);
-    let caleImagineRedim = path.join(__dirname, "Resurse/galerie/mediu", dim, imagine);
+    let caleImagineOrig = path.join(__dirname, "/Resurse/imagini/galerie", imagine);
+    let caleImagineRedim = path.join(__dirname, "/Resurse/imagini/galerie/mediu", dim, imagine);
 
     if (fs.existsSync(caleImagineRedim)) {
         res.sendFile(caleImagineRedim);

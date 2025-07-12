@@ -6,9 +6,9 @@
                 <figure title="<%= imagine.text_descriere %>">
                     <picture>
                         <!-- Imagine pentru ecrane mici -->
-                        <source media="(max-width: 800px)" srcset="/resurse-resizate/small/<%= imagine.cale_fisier %>">
+                        <source media="(max-width: 800px)" srcset="/Resurse/imagini/galerie/mediu/small/<%= imagine.cale_fisier %>">
                         <!-- Imagine pentru ecrane medii -->
-                        <source media="(max-width: 1200px)" srcset="/resurse-resizate/medium/<%= imagine.cale_fisier %>">
+                        <source media="(max-width: 1200px)" srcset="/Resurse/imagini/galerie/mediu/medium/<%= imagine.cale_fisier %>">
                         <!-- Imagine default (mare) -->
                         <img src="<%= obGlobal.obGalerie.cale_galerie %>/<%= imagine.cale_fisier %>" alt="<%= imagine.titlu %>">
                     </picture>
