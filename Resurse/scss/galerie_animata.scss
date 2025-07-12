@@ -67,4 +67,7 @@ $img-border: url('/resurse/imagini/sushi1.jpg');
             }
         }
     }
+    @media screen and (max-width: 1201px) {
+        display: none;
+    }
 }
