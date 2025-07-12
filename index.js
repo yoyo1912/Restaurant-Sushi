@@ -20,21 +20,21 @@ console.log("Folderul curent de lucru (process.cwd()):", process.cwd());
 // __dirname este calea folderului unde se afla fisierul care este apelat (adica index.js in acest caz).
 // process.cwd() este cealea folderului curent de lucru
 app.use('/resurse', express.static(path.join(__dirname, 'Resurse')));
-app.get("/favicon.ico", function(req, res){
+app.get("/favicon.ico", function (req, res) {
     res.sendFile(path.join(__dirname, "resurse/ico/favicon.ico"))
 })
 app.set('view engine', 'ejs');
 
-function initErori(){
+function initErori() {
     try {
-        let continut = fs.readFileSync(path.join(__dirname,"resurse/json/erori.json")).toString("utf-8");
+        let continut = fs.readFileSync(path.join(__dirname, "resurse/json/erori.json")).toString("utf-8");
         console.log(continut)
-        obGlobal.obErori=JSON.parse(continut)
+        obGlobal.obErori = JSON.parse(continut)
         console.log(obGlobal.obErori)
-        
-        obGlobal.obErori.eroare_default.imagine=path.join(obGlobal.obErori.cale_baza, obGlobal.obErori.eroare_default.imagine)
-        for (let eroare of obGlobal.obErori.info_erori){
-            eroare.imagine=path.join(obGlobal.obErori.cale_baza, eroare.imagine)
+
+        obGlobal.obErori.eroare_default.imagine = path.join(obGlobal.obErori.cale_baza, obGlobal.obErori.eroare_default.imagine)
+        for (let eroare of obGlobal.obErori.info_erori) {
+            eroare.imagine = path.join(obGlobal.obErori.cale_baza, eroare.imagine)
         }
         console.log(obGlobal.obErori)
     }
@@ -46,22 +46,22 @@ function initErori(){
 
 initErori()
 
-function afisareEroare(res, identificator, titlu, text, imagine){
-    let eroare= obGlobal.obErori.info_erori.find(function(elem){ 
-                        return elem.identificator==identificator
-                    });
-    if(eroare){
-        if(eroare.status)
+function afisareEroare(res, identificator, titlu, text, imagine) {
+    let eroare = obGlobal.obErori.info_erori.find(function (elem) {
+        return elem.identificator == identificator
+    });
+    if (eroare) {
+        if (eroare.status)
             res.status(identificator)
-        var titluCustom=titlu || eroare.titlu;
-        var textCustom=text || eroare.text;
-        var imagineCustom=imagine || eroare.imagine;
+        var titluCustom = titlu || eroare.titlu;
+        var textCustom = text || eroare.text;
+        var imagineCustom = imagine || eroare.imagine;
     }
-    else{
-        var err=obGlobal.obErori.eroare_default
-        var titluCustom=titlu || err.titlu;
-        var textCustom=text || err.text;
-        var imagineCustom=imagine || err.imagine;
+    else {
+        var err = obGlobal.obErori.eroare_default
+        var titluCustom = titlu || err.titlu;
+        var textCustom = text || err.text;
+        var imagineCustom = imagine || err.imagine;
     }
     res.render("pagini/eroare", {
         titlu: titluCustom,
@@ -72,9 +72,9 @@ function afisareEroare(res, identificator, titlu, text, imagine){
 
 function compileazaScss(caleScss, caleCss) {
     if (!caleCss) {
-        let numeFisExt=path.basename(caleScss);
-        let numeFis=numeFisExt.split(".")[0] ;
-        caleCss=numeFis+".css";
+        let numeFisExt = path.basename(caleScss);
+        let numeFis = numeFisExt.split(".")[0];
+        caleCss = numeFis + ".css";
     }
 
     if (!path.isAbsolute(caleScss)) {
@@ -83,11 +83,11 @@ function compileazaScss(caleScss, caleCss) {
     if (!path.isAbsolute(caleCss)) {
         caleCss = path.join(obGlobal.folderCss, caleCss);
     }
-    
+
     const caleBackup = path.join(__dirname, "backup", "resurse", "css");
     if (fs.existsSync(caleCss)) {
         try {
-            if(!fs.existsSync(caleBackup))
+            if (!fs.existsSync(caleBackup))
                 fs.mkdirSync(caleBackup, { recursive: true });
 
             const numeFisierCss = path.basename(caleCss);
@@ -104,7 +104,7 @@ function compileazaScss(caleScss, caleCss) {
     }
 
     try {
-        const rezultat = sass.compile(caleScss, {"sourceMap":true});
+        const rezultat = sass.compile(caleScss, { "sourceMap": true });
         fs.writeFileSync(caleCss, rezultat.css);
         console.log(`Fisierul ${caleScss} a fost compilat cu succes in ${caleCss}`);
     } catch (err) {
@@ -140,37 +140,37 @@ function getRandomPowerOfTwo(min, max) {
     return powers[index];
 }
 
-vFisiere=fs.readdirSync(obGlobal.folderScss);
-for( let numeFis of vFisiere ){
-    if (path.extname(numeFis)==".scss"){
+vFisiere = fs.readdirSync(obGlobal.folderScss);
+for (let numeFis of vFisiere) {
+    if (path.extname(numeFis) == ".scss") {
         compileazaScss(numeFis);
     }
 }
 
-fs.watch(obGlobal.folderScss, function(eveniment, numeFis){
+fs.watch(obGlobal.folderScss, function (eveniment, numeFis) {
     console.log(eveniment, numeFis);
-    if (eveniment=="change" || eveniment=="rename"){
-        let caleCompleta=path.join(obGlobal.folderScss, numeFis);
-        if (fs.existsSync(caleCompleta)){
+    if (eveniment == "change" || eveniment == "rename") {
+        let caleCompleta = path.join(obGlobal.folderScss, numeFis);
+        if (fs.existsSync(caleCompleta)) {
             compileazaScss(caleCompleta);
         }
     }
 })
 
-vect_foldere=["temp", "backup"]
-for (let folder of vect_foldere ){
-    let caleFolder=path.join(__dirname,folder)
-    if (!fs.existsSync(caleFolder)){
+vect_foldere = ["temp", "backup"]
+for (let folder of vect_foldere) {
+    let caleFolder = path.join(__dirname, folder)
+    if (!fs.existsSync(caleFolder)) {
         fs.mkdirSync(caleFolder);
     }
 }
 
-app.get(/^\/resurse\/[a-zA-Z0-9_\/]*$/, function(req, res, next){
-    afisareEroare(res,403);
+app.get(/^\/resurse\/[a-zA-Z0-9_\/]*$/, function (req, res, next) {
+    afisareEroare(res, 403);
 })
 
-app.get("/{*any}.ejs", function(req, res, next){
-    afisareEroare(res,400);
+app.get("/{*any}.ejs", function (req, res, next) {
+    afisareEroare(res, 400);
 })
 
 app.get('/Resurse/imagini/galerie/mediu/:dim/:imagine', (req, res) => {
@@ -181,7 +181,7 @@ app.get('/Resurse/imagini/galerie/mediu/:dim/:imagine', (req, res) => {
     if (dim === "small") latime = 300;
     else if (dim === "medium") latime = 500;
     else { afisareEroare(res, 400, "Dimensiune invalida"); return; }
-    
+
     let caleImagineOrig = path.join(__dirname, "/Resurse/imagini/galerie", imagine);
     let caleImagineRedim = path.join(__dirname, "/Resurse/imagini/galerie/mediu", dim, imagine);
 
@@ -201,7 +201,7 @@ app.get('/Resurse/imagini/galerie/mediu/:dim/:imagine', (req, res) => {
     }
 });
 
-app.get(["/","/index","/home"], function(req, res){
+app.get(["/", "/index", "/home"], function (req, res) {
     const anotimpCurent = getAnotimp();
     const imaginiDeAfisat = obGlobal.obGalerie.imagini
         .filter(img => img.anotimp === anotimpCurent)
@@ -210,8 +210,8 @@ app.get(["/","/index","/home"], function(req, res){
     const imaginiAnim = obGlobal.obGalerie.imagini
         .filter((img, idx) => idx % 2 === 0)
         .slice(0, nrImgAnim);
-    res.render("pagini/index",{
-        ip:req.ip,
+    res.render("pagini/index", {
+        ip: req.ip,
         imagini: imaginiDeAfisat,
         imaginiAnim: imaginiAnim,
         obGlobal: obGlobal
@@ -230,37 +230,37 @@ app.get("/galerie", (req, res) => {
     });
 });
 
-app.get("/server", function(req, res) {
-    if(true===false){
+app.get("/server", function (req, res) {
+    if (true === false) {
         res.render("pagini/server");
     }
-    else{
+    else {
         afisareEroare(res, 500);
-    }        
+    }
 });
 
-app.get("/{*any}", function(req, res, next){
-    try{
-        res.render("pagini"+req.url,function (err, rezultatRandare){
-            if (err){
-                if(err.message.startsWith("Failed to lookup view")){
-                    afisareEroare(res,404);
+app.get("/{*any}", function (req, res, next) {
+    try {
+        res.render("pagini" + req.url, function (err, rezultatRandare) {
+            if (err) {
+                if (err.message.startsWith("Failed to lookup view")) {
+                    afisareEroare(res, 404);
                 }
-                else{
+                else {
                     afisareEroare(res);
                 }
             }
-            else{
+            else {
                 console.log(rezultatRandare);
                 res.send(rezultatRandare)
             }
         });
     }
-    catch(errRandare){
-        if(errRandare.message.startsWith("Cannot find module")){
-            afisareEroare(res,404);
+    catch (errRandare) {
+        if (errRandare.message.startsWith("Cannot find module")) {
+            afisareEroare(res, 404);
         }
-        else{
+        else {
             afisareEroare(res);
         }
     }
